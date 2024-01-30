@@ -145,13 +145,12 @@ const App = () => {
   };
 
   const deletePerson = id => {
-    const url = `http://localhost:3001/persons/${id}`;
     const personToDelete = persons.find(person => person.id === id);
     const confirmDeletion = window.confirm(`Delete ${personToDelete.name}?`);
 
     if (confirmDeletion) {
       personService
-        .remove(url)
+        .remove(id)
         .then(() => {
           setPersons(persons.filter((person) => person.id !== id));
         })
