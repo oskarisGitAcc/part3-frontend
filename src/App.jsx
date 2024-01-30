@@ -135,8 +135,11 @@ const App = () => {
           }, 5000)
           setPersons([...persons, returnedPerson]);
         })
-        .catch(error => {
-          console.error('Error adding person:', error);
+        .catch((error) => {
+          setUnsuccessfulPopup(error.response.data.error);
+          setTimeout(() => {
+            setUnsuccessfulPopup(null);
+          }, 5000);
         });
     }
   
