@@ -1,3 +1,9 @@
+Frontend is located at
+https://github.com/oskarisGitAcc/part3-backend
+
+The app is deployed online on:
+https://fullstack-part3-backend.fly.dev/
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
